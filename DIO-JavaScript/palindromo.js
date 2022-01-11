@@ -1,12 +1,34 @@
 /*Atividade para verificar se uma palavra é palindroma*/
 
 function verificaPalindromo(string){
-    if(!string) return "string inexistente";
-    
-    return string.split("").reverse().join("") === "string";
+    if(!string) return;
+    console.log(string === string.split('').reverse().join(''));
+
 }
 
-/*verificaPalindromo("ama");
-console.log(`A palavra ${string} é uma palavra palíndroma`);
+verificaPalindromo('rever');
+
+/*
+// solução 1
+function verificaPalindromo(string) {
+	if (!string) return;
+	console.log(string === string.split('').reverse().join(''));
+}
+verificaPalindromo('cat');
+
+// solução 2
+
+function varificaPalindromo2(string) {
+	if (!string) return;
+	if (!string.length) return;
+
+	for (var i = 0; i < string.length / 2; i++) {
+		if (string[i] !== string[string.length - 1 - i]) {
+			return console.log(false);
+		}
+	}
+	return console.log(true);
+}
+
+varificaPalindromo2('asa');
 */
-console.log(verificaPalindromo("rever"));
